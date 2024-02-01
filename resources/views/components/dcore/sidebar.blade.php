@@ -25,11 +25,11 @@
             </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Forms</span></a>
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Informasi</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="https://demo.getstisla.com/forms-advanced-form.html">Advanced Form</a></li>
-                <li><a class="nav-link" href="https://demo.getstisla.com/forms-editor.html">Editor</a></li>
-                <li><a class="nav-link" href="https://demo.getstisla.com/forms-validation.html">Validation</a></li>
+                <li><a class="nav-link" href="{{route('tambah_informasi')}}">Tambah Informasi</a></li>
+                <li><a class="nav-link" href="{{route('daftar_informasi')}}">Daftar Informasi</a></li>
+
               </ul>
             </li>
             <li class="dropdown">

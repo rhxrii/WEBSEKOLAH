@@ -93,4 +93,43 @@ class BeritaController extends Controller
             'tagOut'
         ));
     }
+    public function update_beritaadm(Request $req, $id){
+        $judul = $req->judulberita;
+        $tag = $req->tag;
+        $deskripsi = $req->deskripsi;
+        if($req->file('gambarberita') == null){
+            $this->validate($req, [
+                'deskripsi' => 'required',
+            ]);
+           
+            $data = Berita::find($id)->update([
+                'judul'   => $judul,
+                'tag'     => $tag,
+                'deskripsi' => $deskripsi,
+                'slugberita'=> Str::slug($judul),
+            ]);
+            Alert::toast('Berita Berhasil Di Update', 'success'); 
+            return redirect()->back();
+        }else{
+        $gambar = $req->file('gambarberita');
+       
+        $this->validate($req, [
+            'gambarberita' => ['image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
+            'deskripsi' => 'required',
+        ]);
+        $path = 'GBERITA';
+        $ext = $gambar->getClientOriginalExtension();
+        $namafile = 'Gambar_'.date('d_y_t').".".$ext;
+        $gambar->move($path, $namafile);
+        $data = Berita::find($id)->update([
+            'gberita' => $namafile,
+            'judul'   => $judul,
+            'tag'     => $tag,
+            'deskripsi' => $deskripsi,
+            'slugberita'=> Str::slug($judul),
+        ]);
+        Alert::toast('Berita Berhasil Di Update', 'success'); 
+        return redirect()->back();
+        }
+    }
 }

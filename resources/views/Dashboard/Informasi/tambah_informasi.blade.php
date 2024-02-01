@@ -13,34 +13,34 @@
                     <div class="col-lg-8">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Edit Berita</h4>
+                                <h4>Tambah Informasi</h4>
                             </div>
-                            <form action="{{route('update_beritaadm', $databerita->id)}}" method="post" enctype="multipart/form-data">
+                            <form action="{{route('upload_informasi')}}" method="post" enctype="multipart/form-data">
                                 @csrf
                            
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label>Gambar Berita</label>
-                                    <input type="file" name="gambarberita" class="form-control-file">
+                                    <label>Gambar Informasi</label>
+                                    <input type="file" name="ginformasi" class="form-control-file">
                                 </div>
                                 <div class="form-group">
-                                    <label>Judul Berita</label>
-                                    <input type="text" name="judulberita" class="form-control"
-                                        placeholder="Judul Berita" value="{{$databerita->judul}}">
+                                    <label>Judul Informasi</label>
+                                    <input type="text" name="judul_informasi" class="form-control"
+                                        placeholder="Judul Berita">
                                 </div>
                                 <div class="form-group">
                                     <label>Tag* ( Jika tidak ada pilih (-) )</label>
-                                    <select name="tag" class="form-control">
+                                    <select name="tag_informasi" class="form-control">
                                         <option disabled selected value>Silahkan Pilih Tag</option>
-                                        <option @if($databerita->tag == '-') selected @endif>-</option>
-                                        @foreach($tagOut as $tagselect)
-                                        <option value="{{$tagselect->tag}}" @if($databerita->tag == $tagselect->tag) selected @endif>{{$tagselect->tag}}</option>
+                                        <option>-</option>
+                                        @foreach($tagInformasiOut as $tagSelect)
+                                        <option value="{{$tagSelect->tag_informasi}}">{{$tagSelect->tag_informasi}}</option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control @error('deskripsi') is-invalid @enderror" id="content" placeholder="Enter the Description"
-                                        rows="5" name="deskripsi">{{$databerita->deskripsi}}</textarea>
+                                    <textarea class="form-control @error('deskripsi_informasi') is-invalid @enderror" id="content" placeholder="Enter the Description"
+                                        rows="5" name="deskripsi_informasi"></textarea>
                                         @error('deskripsi')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -57,22 +57,31 @@
                     <div class="col-lg-4">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Daftar Tag Berita</h4>
+                                <h4>Tambah Tag Informasi</h4>
                             </div>
                             <div class="card-body">
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-primary btn-block" data-toggle="modal"
+                                        data-target="#ModalTagInformasi">
+                                        Tambah Tag Informasi
+                                    </button>
+                                </div>
                                 <div class="form-group">
                                     <table class="table">
                                         <tr>
                                             <td>No</td>
                                             <td>Tag</td>
-                                            
+                                            <td>Action</td>
                                         </tr>
                                         @php $no = 1; @endphp
-                                        @foreach($tagOut as $tag)
+                                        @foreach($tagInformasiOut as $tag)
                                         <tr>
                                             <td>{{$no++}}</td>
-                                            <td>{{$tag->tag}}</td>
-                                           
+                                            <td>{{$tag->tag_informasi}}</td>
+                                            <td>
+                                            <a href="{{route('hapus_taginformasi',$tag->id)}}"
+                                                    class="btn btn-danger btn-block"><i class="fa fa-trash"></i></a>
+                                            </td>
                                         </tr>
                                         @endforeach
                                     </table>
