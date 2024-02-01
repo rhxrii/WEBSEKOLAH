@@ -48,7 +48,6 @@
                                                 <a href="{{route('lihat_informasiadm', $informasi->id)}}" class="btn btn-info ml-2"><i class="fa fa-eye"></i></a>
                                                 <a href="{{route('hapus_informasiadm', $informasi->id)}}" class="btn btn-danger ml-2" data-confirm-delete="true"><i class="fa fa-trash" ></i></a>
                                                 <a href="" class="btn btn-warning ml-2"><i class="fa fa-edit"></i></a>
-
                                             </div>
                                         </div>
 
