@@ -33,16 +33,10 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-map-marker-alt"></i> <span>Google Maps</span></a>
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-image"></i> <span>Galeri</span></a>
               <ul class="dropdown-menu">
-                <li><a href="https://demo.getstisla.com/gmaps-advanced-route.html">Advanced Route</a></li>
-                <li><a href="https://demo.getstisla.com/gmaps-draggable-marker.html">Draggable Marker</a></li>
-                <li><a href="https://demo.getstisla.com/gmaps-geocoding.html">Geocoding</a></li>
-                <li><a href="https://demo.getstisla.com/gmaps-geolocation.html">Geolocation</a></li>
-                <li><a href="https://demo.getstisla.com/gmaps-marker.html">Marker</a></li>
-                <li><a href="https://demo.getstisla.com/gmaps-multiple-marker.html">Multiple Marker</a></li>
-                <li><a href="https://demo.getstisla.com/gmaps-route.html">Route</a></li>
-                <li><a href="https://demo.getstisla.com/gmaps-simple.html">Simple</a></li>
+                <li><a href="{{route('indexfoto')}}">Foto</a></li>
+                <li><a href="">Video</a></li>
               </ul>
             </li>            
             <li class="dropdown">

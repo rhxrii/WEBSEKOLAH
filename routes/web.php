@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\InformasiController;
 use Illuminate\Support\Facades\Route;
 
@@ -47,5 +48,14 @@ Route::controller(InformasiController::class)->prefix('/home/informasi')->group(
     Route::get('/daftar_informasi', 'daftar_informasi')->name('daftar_informasi');
     Route::get('/daftar_informasi/{id}/lihat_informasiadm', 'lihat_informasiadm')->name('lihat_informasiadm', $id);
     Route::get('/daftar_informasi/{id}/hapus_informasiadm', 'hapus_informasiadm')->name('hapus_informasiadm', $id);
-   // Route::get('/daftar_informasi/{id}/edit_informasiadm', 'edit_informasiadm')->name('edit_informasiadm', $id);
+    Route::get('/daftar_informasi/{id}/edit_informasiadm', 'edit_informasiadm')->name('edit_informasiadm', $id);
+    Route::post('/daftar_informasi/{id}/edit_informasiadm/update_informasiadm', 'update_informasiadm')->name('update_informasiadm', $id);
+
+});
+
+Route::controller(GaleriController::class)->prefix('/home/galeri')->group(function(){
+
+    Route::get('/foto', 'indexfoto')->name('indexfoto');
+    Route::post('/foto/uploadfoto', 'uploadfoto')->name('uploadfoto');
+    Route::get('/foto/{id}/hapusfoto', 'hapusfoto')->name('hapusfoto');
 });

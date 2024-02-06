@@ -70,11 +70,9 @@ class BeritaController extends Controller
         }
     }
     public function daftar_berita(){
-        $daftarberita = Berita::orderBy('id', 'DESC')->get();
+        $daftarberita = Berita::orderBy('id', 'DESC')->simplePaginate(6);
         return view('Dashboard/Berita/daftar_berita', compact('daftarberita'));
-        $title = 'Delete Data!';
-        $text = "Are you sure you want to delete?";
-        confirmDelete($title, $text);
+       
     }
     public function lihat_beritaadm($id){
         $data = Berita::find($id);
