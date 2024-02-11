@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Alert;
 use App\Models\Foto;
+use App\Models\Video;
 use Illuminate\Http\Request;
 
 class GaleriController extends Controller
@@ -37,6 +38,19 @@ class GaleriController extends Controller
     public function hapusfoto($id){
         $data = Foto::find($id)->delete();
         Alert::toast('Foto Berhasil Di Hapus', 'success'); 
+        return redirect()->back();
+    }
+    public function indexvideo(){
+        $dt = Video::orderBy('id', 'DESC')->simplePaginate(4);
+       
+      return view('Dashboard/Galeri/Video/indexvideo', compact('dt'));
+    }
+    public function uploadvideo(Request $req){
+        $kode = $req->kodevideo;
+        Video::create([
+            'kodevideo' => $kode
+        ]);
+        Alert::toast('Video Berhasil Di Input', 'success'); 
         return redirect()->back();
     }
 }

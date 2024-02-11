@@ -36,7 +36,7 @@
               <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-image"></i> <span>Galeri</span></a>
               <ul class="dropdown-menu">
                 <li><a href="{{route('indexfoto')}}">Foto</a></li>
-                <li><a href="">Video</a></li>
+                <li><a href="{{route('indexvideo')}}">Video</a></li>
               </ul>
             </li>            
             <li class="dropdown">

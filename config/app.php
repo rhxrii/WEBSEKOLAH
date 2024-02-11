@@ -160,6 +160,7 @@ return [
          * Package Service Providers...
          */
         Arikun\Stislasimple\StislaServiceProvider::class,
+        Alaouy\Youtube\YoutubeServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -183,6 +184,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'Youtube' => Alaouy\Youtube\Facades\Youtube::class,
     ])->toArray(),
 
 ];

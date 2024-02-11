@@ -4,6 +4,7 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\InformasiController;
 use Illuminate\Support\Facades\Route;
+use Alaouy\Youtube\Facades\Youtube;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,4 +59,6 @@ Route::controller(GaleriController::class)->prefix('/home/galeri')->group(functi
     Route::get('/foto', 'indexfoto')->name('indexfoto');
     Route::post('/foto/uploadfoto', 'uploadfoto')->name('uploadfoto');
     Route::get('/foto/{id}/hapusfoto', 'hapusfoto')->name('hapusfoto');
+    Route::get('/video', 'indexvideo')->name('indexvideo');
+    Route::post('/video/uploadvideo', 'uploadvideo')->name('uploadvideo');
 });
