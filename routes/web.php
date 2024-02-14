@@ -5,6 +5,8 @@ use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\InformasiController;
 use Illuminate\Support\Facades\Route;
 use Alaouy\Youtube\Facades\Youtube;
+use App\Http\Controllers\AgendaController;
+use App\Http\Controllers\MediaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,11 +56,29 @@ Route::controller(InformasiController::class)->prefix('/home/informasi')->group(
 
 });
 
-Route::controller(GaleriController::class)->prefix('/home/galeri')->group(function(){
+Route::controller(GaleriController::class)->prefix('/home/galeri')->group(function($id = null){
 
     Route::get('/foto', 'indexfoto')->name('indexfoto');
     Route::post('/foto/uploadfoto', 'uploadfoto')->name('uploadfoto');
-    Route::get('/foto/{id}/hapusfoto', 'hapusfoto')->name('hapusfoto');
+    Route::get('/foto/{id}/hapusfoto', 'hapusfoto')->name('hapusfoto', $id);
     Route::get('/video', 'indexvideo')->name('indexvideo');
     Route::post('/video/uploadvideo', 'uploadvideo')->name('uploadvideo');
+    Route::get('/video/{id}/hapusvideo', 'hapusvideo')->name('hapusvideo', $id);
+});
+
+Route::controller(AgendaController::class)->prefix('/home/agenda')->group(function($id = null){
+    Route::get('/tambahagenda', 'tambahagenda')->name('tambahagenda');
+    Route::post('/tambahagenda/uploadagenda', 'uploadagenda')->name('uploadagenda');
+    Route::get('/daftaragenda', 'daftaragenda')->name('daftaragenda');
+    Route::get('/daftaragenda/{id}/ubahsukses', 'ubahsukses')->name('ubahsukses', $id);
+    Route::get('/daftaragenda/{id}/ubahakan', 'ubahakan')->name('ubahakan', $id);
+    Route::get('/daftaragenda/{id}/ubahsedang', 'ubahsedang')->name('ubahsedang', $id);
+    Route::get('/daftaragenda/{id}/hapusagenda', 'hapusagenda')->name('hapusagenda', $id);
+});
+
+Route::controller(MediaController::class)->prefix('/home/media')->group(function($id = null){
+    Route::get('/indexmediadownload', 'indexmediadownload')->name('indexmediadownload');
+    Route::post('/indexmediadownload/uploadmdownload', 'uploadmdownload')->name('uploadmdownload');
+    Route::get('/indexmediadownload/{id}/downloadfile', 'downloadfile')->name('downloadfile', $id);
+    Route::get('/indexmediadownload/{id}/hapusdownloadfile', 'hapusdownloadfile')->name('hapusdownloadfile', $id);
 });

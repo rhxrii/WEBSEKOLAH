@@ -53,4 +53,9 @@ class GaleriController extends Controller
         Alert::toast('Video Berhasil Di Input', 'success'); 
         return redirect()->back();
     }
+    public function hapusvideo($id){
+        $data = Video::find($id)->delete();
+        Alert::toast('Video Berhasil Di Hapus', 'success'); 
+        return redirect()->back();
+    }
 }

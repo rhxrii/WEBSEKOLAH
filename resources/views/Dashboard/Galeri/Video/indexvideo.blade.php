@@ -49,7 +49,8 @@
                                                 </div>
                                             </div>
                                             <div class="card-body d-flex justify-content-center">
-                                                <a href="" class="btn btn-danger ml-2" data-confirm-delete="true"><i class="fa fa-trash" ></i></a>
+                                                <a href="{{route('hapusvideo', $vid->id)}}" class="btn btn-danger ml-2" data-confirm-delete="true"><i class="fa fa-trash" ></i></a>
+                                                <a href="https://www.youtube.com/watch?v={{$vid->kodevideo}}" target="blank_" class="btn btn-info ml-2" data-confirm-delete="true"><i class="fa fa-eye" ></i></a>
 
                                             </div>
                                         </div>

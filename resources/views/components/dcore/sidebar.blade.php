@@ -40,20 +40,18 @@
               </ul>
             </li>            
             <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-plug"></i> <span>Modules</span></a>
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-calendar"></i> <span>Agenda</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="https://demo.getstisla.com/modules-calendar.html">Calendar</a></li>
-                <li><a class="nav-link" href="https://demo.getstisla.com/modules-chartjs.html">ChartJS</a></li>
-                <li><a class="nav-link" href="https://demo.getstisla.com/modules-datatables.html">DataTables</a></li>
-                <li><a class="nav-link" href="https://demo.getstisla.com/modules-flag.html">Flag</a></li>
-                <li><a class="nav-link" href="https://demo.getstisla.com/modules-font-awesome.html">Font Awesome</a></li>
-                <li><a class="nav-link" href="https://demo.getstisla.com/modules-ion-icons.html">Ion Icons</a></li>
-                <li><a class="nav-link" href="https://demo.getstisla.com/modules-owl-carousel.html">Owl Carousel</a></li>
-                <li><a class="nav-link" href="https://demo.getstisla.com/modules-sparkline.html">Sparkline</a></li>
-                <li><a class="nav-link" href="https://demo.getstisla.com/modules-sweet-alert.html">Sweet Alert</a></li>
-                <li><a class="nav-link" href="https://demo.getstisla.com/modules-toastr.html">Toastr</a></li>
-                <li><a class="nav-link" href="https://demo.getstisla.com/modules-vector-map.html">Vector Map</a></li>
-                <li><a class="nav-link" href="https://demo.getstisla.com/modules-weather-icon.html">Weather Icon</a></li>
+                <li><a class="nav-link" href="{{route('tambahagenda')}}">Tambah Agenda</a></li>
+                <li><a class="nav-link" href="{{route('daftaragenda')}}">Daftar Agenda</a></li>
+
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-backward"></i> <span>Media KBM</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="{{route('indexmediadownload')}}">Media Download</a></li>
+                <li><a class="nav-link" href="">Media Link</a></li>
               </ul>
             </li>
           </ul>
