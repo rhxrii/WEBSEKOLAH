@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Alert;
 use App\Models\Informasi;
+use App\Models\LogoSekolah;
 use App\Models\TagInformasi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -28,8 +29,10 @@ class InformasiController extends Controller
     
     public function tambah_informasi(){
         $tagInformasiOut = TagInformasi::all();
+        $logo = LogoSekolah::get();
         return view('Dashboard/Informasi/tambah_informasi', compact(
-            'tagInformasiOut'
+            'tagInformasiOut',
+            'logo'
         ));
     }
     public function upload_informasi(Request $req){
@@ -72,13 +75,15 @@ class InformasiController extends Controller
         }
     }
     public function daftar_informasi(){
-        $daftar_informasi = Informasi::orderBy('id', 'DESC')->simplePaginate(6);;
-        return view('Dashboard/Informasi/daftar_informasi', compact('daftar_informasi'));
+        $daftar_informasi = Informasi::orderBy('id', 'DESC')->simplePaginate(6);
+        $logo = LogoSekolah::get();
+        return view('Dashboard/Informasi/daftar_informasi', compact('daftar_informasi', 'logo'));
     }
 
     public function lihat_informasiadm($id){
         $data = Informasi::find($id);
-        return view('Dashboard/Informasi/lihat_informasiadm', compact('data'));
+        $logo = LogoSekolah::get();
+        return view('Dashboard/Informasi/lihat_informasiadm', compact('data', 'logo'));
     }
     public function hapus_informasiadm($id){
         $data = Informasi::find($id)->delete();
@@ -88,9 +93,11 @@ class InformasiController extends Controller
     public function edit_informasiadm($id){
         $datainformasi = Informasi::find($id);
         $tagOut    = TagInformasi::all();
+        $logo = LogoSekolah::get();
         return view('Dashboard/Informasi/editinformasi', compact(
             'datainformasi',
-            'tagOut'
+            'tagOut',
+            'logo'
         ));
     }
     public function update_informasiadm(Request $req, $id){

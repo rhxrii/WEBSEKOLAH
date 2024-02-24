@@ -6,7 +6,9 @@ use App\Http\Controllers\InformasiController;
 use Illuminate\Support\Facades\Route;
 use Alaouy\Youtube\Facades\Youtube;
 use App\Http\Controllers\AgendaController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\MediaController;
+use App\Http\Controllers\ProfilController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +21,17 @@ use App\Http\Controllers\MediaController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::controller(ClientController::class)->prefix('/')->group(function($id = null){
+    Route::get('/', 'indexdepan')->name('indexdepan');
+
+
+    Route::get('/informasi/{id}/bacainformasi', 'bacainformasi')->name('bacainformasi');
+
+    Route::get('/berita/{id}/bacaberita', 'bacaberita')->name('bacaberita');
 });
 
 Auth::routes();
@@ -81,4 +92,26 @@ Route::controller(MediaController::class)->prefix('/home/media')->group(function
     Route::post('/indexmediadownload/uploadmdownload', 'uploadmdownload')->name('uploadmdownload');
     Route::get('/indexmediadownload/{id}/downloadfile', 'downloadfile')->name('downloadfile', $id);
     Route::get('/indexmediadownload/{id}/hapusdownloadfile', 'hapusdownloadfile')->name('hapusdownloadfile', $id);
+
+    Route::get('/indexmedialink', 'indexmedialink')->name('indexmedialink');
+    Route::post('/indexmedialink/uploadmlink', 'uploadmlink')->name('uploadmlink');
+    Route::get('/indexmedialink/{id}/hapuslink', 'hapuslink')->name('hapuslink', $id);
+});
+
+Route::controller(ProfilController::class)->prefix('/home/profil')->group(function(){
+    Route::get('/indexkepsek', 'indexkepsek')->name('indexkepsek');
+    Route::post('/indexkepsek/uploadkepsek', 'uploadkepsek')->name('uploadkepsek');
+
+    Route::get('/indexsekolah', 'indexsekolah')->name('indexsekolah');
+    Route::post('/indexsekolah/uploadsekolah', 'uploadsekolah')->name('uploadsekolah');
+
+    Route::get('/indexvisimisi', 'indexvisimisi')->name('indexvisimisi');
+    Route::post('/indexvisimisi/uploadvisimisi', 'uploadvisimisi')->name('uploadvisimisi');
+
+    Route::get('/indexstrukturorganisasi', 'indexstrukturorganisasi')->name('indexstrukturorganisasi');
+    Route::post('/indexstrukturorganisasi/uploadstruktur', 'uploadstruktur')->name('uploadstruktur');
+
+    Route::get('/indexlogo', 'indexlogo')->name('indexlogo');
+    Route::post('/indexlogo', 'uploadlogo')->name('uploadlogo');
+
 });

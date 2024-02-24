@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Alert;
 use App\Models\Foto;
+use App\Models\LogoSekolah;
 use App\Models\Video;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,8 @@ class GaleriController extends Controller
 {
     public function indexfoto(){
         $data = Foto::orderBy('id', 'desc')->simplePaginate(4);
-        return view('Dashboard/Galeri/Foto/indexfoto', compact('data'));
+        $logo = LogoSekolah::get();
+        return view('Dashboard/Galeri/Foto/indexfoto', compact('data', 'logo'));
     }
     public function uploadfoto(Request $req){
         $judul_foto = $req->judul_foto;
@@ -24,7 +26,7 @@ class GaleriController extends Controller
         ]);
         $path = 'GFOTO';
         $ext = $gambar->getClientOriginalExtension();
-        $namafile = 'Gambar_'.date('d_y_t').".".$ext;
+        $namafile = 'Gambar_'.date('d_y_t_s').".".$ext;
         $gambar->move($path, $namafile);
         $data = Foto::create([
             'gfoto' => $namafile,
@@ -42,8 +44,8 @@ class GaleriController extends Controller
     }
     public function indexvideo(){
         $dt = Video::orderBy('id', 'DESC')->simplePaginate(4);
-       
-      return view('Dashboard/Galeri/Video/indexvideo', compact('dt'));
+        $logo = LogoSekolah::get();
+      return view('Dashboard/Galeri/Video/indexvideo', compact('dt', 'logo'));
     }
     public function uploadvideo(Request $req){
         $kode = $req->kodevideo;

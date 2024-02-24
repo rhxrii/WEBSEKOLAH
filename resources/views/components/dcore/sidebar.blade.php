@@ -1,20 +1,16 @@
 <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html">Stisla</a>
+            @forelse($logo as $lg)
+            <img src="{{asset('PROFIL/'. $lg->foto)}}" class="img-fluid" width="50px" height="50px">
+            @empty
+            <a href="index.html">Dashboard Sekolah</a>
+            @endforelse
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">St</a>
+            <a href="index.html">DS</a>
           </div>
           <ul class="sidebar-menu">
-            <li class="menu-header">Dashboard</li>
-            <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
-              <ul class="dropdown-menu">
-                <li class=active><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
-              </ul>
-            </li>
-         
             <li class="menu-header">Main Menu</li>
             <li class="dropdown">
               <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Berita</span></a>
@@ -51,7 +47,17 @@
               <a href="#" class="nav-link has-dropdown"><i class="fas fa-backward"></i> <span>Media KBM</span></a>
               <ul class="dropdown-menu">
                 <li><a class="nav-link" href="{{route('indexmediadownload')}}">Media Download</a></li>
-                <li><a class="nav-link" href="">Media Link</a></li>
+                <li><a class="nav-link" href="{{route('indexmedialink')}}">Media Link</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-info"></i> <span>Profil</span></a>
+              <ul class="dropdown-menu">
+              <li><a class="nav-link" href="{{route('indexlogo')}}">Logo Sekolah</a></li>
+                <li><a class="nav-link" href="{{route('indexkepsek')}}">Profil Kepala Sekolah</a></li>
+                <li><a class="nav-link" href="{{route('indexsekolah')}}">Profil Sekolah</a></li>
+                <li><a class="nav-link" href="{{route('indexvisimisi')}}">Visi & Misi</a></li>
+                <li><a class="nav-link" href="{{route('indexstrukturorganisasi')}}">Struktur Organisasi</a></li>
               </ul>
             </li>
           </ul>

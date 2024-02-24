@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Alert;
 use App\Models\Berita;
+use App\Models\LogoSekolah;
 use App\Models\TagBerita;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -26,8 +27,10 @@ class BeritaController extends Controller
     }
     public function tambah_berita(){
         $tagOut = TagBerita::all();
+        $logo = LogoSekolah::get();
         return view('Dashboard/Berita/tambah_berita', compact(
             'tagOut',
+            'logo'
         ));
     }
     public function upload_berita(Request $req){
@@ -71,12 +74,14 @@ class BeritaController extends Controller
     }
     public function daftar_berita(){
         $daftarberita = Berita::orderBy('id', 'DESC')->simplePaginate(6);
-        return view('Dashboard/Berita/daftar_berita', compact('daftarberita'));
+        $logo = LogoSekolah::get();
+        return view('Dashboard/Berita/daftar_berita', compact('daftarberita', 'logo'));
        
     }
     public function lihat_beritaadm($id){
         $data = Berita::find($id);
-        return view('Dashboard/Berita/lihatberitaadm', compact('data'));
+        $logo = LogoSekolah::get();
+        return view('Dashboard/Berita/lihatberitaadm', compact('data', 'logo'));
     }
     function hapus_beritaadm($id){
         $data = Berita::find($id)->delete();
@@ -86,15 +91,18 @@ class BeritaController extends Controller
     public function edit_beritaadm($id){
         $databerita = Berita::find($id);
         $tagOut    = TagBerita::all();
+        $logo = LogoSekolah::get();
         return view('Dashboard/Berita/editberita', compact(
             'databerita',
-            'tagOut'
+            'tagOut',
+            'logo'
         ));
     }
     public function update_beritaadm(Request $req, $id){
         $judul = $req->judulberita;
         $tag = $req->tag;
         $deskripsi = $req->deskripsi;
+        
         if($req->file('gambarberita') == null){
             $this->validate($req, [
                 'deskripsi' => 'required',
