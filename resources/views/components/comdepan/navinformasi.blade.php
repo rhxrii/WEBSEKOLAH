@@ -9,8 +9,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                        <a href="{{url('/')}}" class="nav-item nav-link active">Beranda</a>
-                        <a href="{{route('informasi')}}" class="nav-item nav-link">Informasi</a>
+                        <a href="{{url('/')}}" class="nav-item nav-link">Beranda</a>
+                        <a href="{{route('informasi')}}" class="nav-item nav-link active">Informasi</a>
                         <a href="{{route('berita')}}" class="nav-item nav-link">Berita</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Galeri</a>
