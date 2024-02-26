@@ -76,8 +76,9 @@
 
     <!-- Blog Start -->
     <div class="container blog py-5">
-
-                <table class="table table-responsive" id="tableberita">
+        <div class="row">
+            <div class="col-md-12">
+            <table class="table table-responsive" id="tableberita">
                     <thead>
                         <tr>
                             <td>No</td>
@@ -110,7 +111,8 @@
                         @endforeach
                     </tbody>
                 </table>
-        
+            </div>
+        </div>
     </div>
     <!-- Blog End -->
 
