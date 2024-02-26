@@ -11,7 +11,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="author" content="AdminTelematika">
-
+    <meta property="og:image" content="https://lh3.googleusercontent.com/p/AF1QipN5lBINeWJVCkArpLZlPjSvGV5ojbGyVkZJxrv2=w1080-h608-p-no-v0">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/p/AF1QipN5lBINeWJVCkArpLZlPjSvGV5ojbGyVkZJxrv2=w1080-h608-p-no-v0">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
