@@ -54,7 +54,7 @@ Route::controller(ClientController::class)->prefix('/')->group(function($id = nu
 
 });
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
