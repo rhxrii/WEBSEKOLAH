@@ -81,7 +81,7 @@
                 @if($sekolah == Null)
                 <img src="{{asset('GBERITA/noimage.jpg')}}" class="img-fluid rounded card-img-top" alt="">
                 @else
-                <img src="{{asset('PROFIL/'. $sekolah->foto)}}" class="img-fluid rounded card-img-top" alt="">
+                <img src="{{asset('PROFIL/'. $sekolah->foto)}}" class="img-fluid rounded card-foto-top" alt="">
 
                 @endif
             </div>
