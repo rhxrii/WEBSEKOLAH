@@ -7,17 +7,15 @@
      
       <div class="main-content">
         <section class="section">
-        <x-dcore.card />
-
         <!-- MAIN OF CENTER CONTENT -->
           <div class="row">
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-header">
-                  <h4>Budget vs Sales</h4>
+                  <h4>Selamat Datang</h4>
                 </div>
-                <div class="card-body">
-                  <canvas id="myChart" height="158"></canvas>
+                <div class="card-body d-flex justify-content-center">
+                  <h3>Selamat Datang Di Aplikasi Web SMKTI</h3>
                 </div>
               </div>
             </div>
