@@ -95,7 +95,7 @@
                             <td>{{$no++}}</td>
                             <td>{{$agenda->judul}}</td>
                             <td>Tanggal : {{$agenda->tanggal}}, Waktu : {{$agenda->waktu}}</td>
-                            <td>{!! Str::limit($agenda->kegiatan, 100, '...') !!}</td>
+                            <td>{!! $agenda->kegiatan !!}</td>
                             <td>
                                 @if($agenda->status == 'Akan')
                                 <p class="text-warning"><i class="fa fa-exclamation-triangle"></i> Akan Dilaksanakan</p>
