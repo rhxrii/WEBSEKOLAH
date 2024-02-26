@@ -77,7 +77,7 @@
     <!-- Blog Start -->
     <div class="container">
         <div class="row">
-            <div class="col-md-12 table-responsive mt-3">
+            <div class="col-md-12 table-responsive mt-3 mb-3">
             <table class="table" id="tableberita">
                     <thead>
                         <tr>
