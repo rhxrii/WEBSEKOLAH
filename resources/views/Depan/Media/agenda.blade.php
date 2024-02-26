@@ -75,7 +75,7 @@
     <!-- Header End -->
 
     <!-- Blog Start -->
-    <div class="container blog py-5">
+    <div class="container blog">
         <div class="row">
             <div class="col-md-12">
             <table class="table table-responsive" id="tableberita">
