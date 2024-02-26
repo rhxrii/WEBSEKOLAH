@@ -9,7 +9,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                        <a href="{{url('/')}}" class="nav-item nav-link active">Beranda</a>
+                        <a href="{{url('/')}}" class="nav-item nav-link">Beranda</a>
                         <a href="{{route('informasi')}}" class="nav-item nav-link">Informasi</a>
                         <a href="{{route('berita')}}" class="nav-item nav-link">Berita</a>
                         <div class="nav-item dropdown">
@@ -20,7 +20,7 @@
                             </div>
                         </div>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Profil</a>
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Profil</a>
                             <div class="dropdown-menu m-0">
                                 <a href="{{route('sekolah')}}" class="dropdown-item">Sekolah</a>
                                 <a href="{{route('kepsek')}}" class="dropdown-item">Kepala Sekolah</a>
