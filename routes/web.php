@@ -28,10 +28,30 @@ use App\Http\Controllers\ProfilController;
 Route::controller(ClientController::class)->prefix('/')->group(function($id = null){
     Route::get('/', 'indexdepan')->name('indexdepan');
 
+    Route::get('/tentang', 'tentang')->name('tentang');
 
+    Route::get('/informasi', 'informasi')->name('informasi');
     Route::get('/informasi/{id}/bacainformasi', 'bacainformasi')->name('bacainformasi');
 
+    Route::get('/berita', 'berita')->name('berita');
     Route::get('/berita/{id}/bacaberita', 'bacaberita')->name('bacaberita');
+
+    Route::get('/galeri', 'galeri')->name('galeri');
+    Route::get('/galeri/foto', 'galerifoto')->name('galerifoto');
+    Route::get('/galeri/video', 'galerivideo')->name('galerivideo');
+
+    Route::get('/profil/sekolah', 'sekolah')->name('sekolah');
+    Route::get('/profil/kepsek', 'kepsek')->name('kepsek');
+    Route::get('/profil/visimisi', 'visimisi')->name('visimisi');
+    Route::get('/profil/struktur', 'struktur')->name('struktur');
+
+    Route::get('/media/agenda', 'agenda')->name('agenda');
+    Route::get('/media/download', 'download')->name('download');
+    Route::get('/media/download/{id}/dd', 'dd')->name('dd', $id);
+
+    Route::get('/privacy', 'privacy')->name('privacy');
+    Route::get('/terms', 'terms')->name('terms');
+
 });
 
 Auth::routes();

@@ -21,7 +21,7 @@
     <!-- Navbar & Hero End -->
 
     <!-- About Start -->
-    <x-comdepan.about />
+    <x-comdepan.about :tentang="$tentang"/>
     <!-- About End -->
 
     <!-- Services Start -->
@@ -36,10 +36,6 @@
     <!-- Gallery Start -->
     <x-comdepan.galery :foto="$foto"/>
     <!-- Gallery End -->
-
-    <!-- Tour Booking Start -->
-    <x-comdepan.booking />
-    <!-- Tour Booking End -->
 
     <!-- Testimonial Start -->
     <x-comdepan.testi />

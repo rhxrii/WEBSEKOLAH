@@ -27,5 +27,12 @@
     (d.head || d.body).appendChild(s);
     })();
 </script>
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+
+<script>
+    $(document).ready( function () {
+    $('#tableberita').DataTable();
+} );
+</script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </body>

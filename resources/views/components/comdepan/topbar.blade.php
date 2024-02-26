@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-lg-4 text-center text-lg-end">
                     <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a href="#"><small class="me-3 text-light"><i class="fa fa-mail me-2"></i>smktelematikaindramayu@gmail.com</small></a>
+                        <a href="#"><small class="me-3 text-light"><i class="fa fa-envelope me-2"></i>smktelematikaindramayu@gmail.com</small></a>
                         <a href="#"><small class="me-3 text-light"><i class="fa fa-phone me-2"></i>(0234 271412)</small></a>
                       
                     </div>

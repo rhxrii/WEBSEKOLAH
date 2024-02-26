@@ -9,7 +9,7 @@
                     <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/about-img-1.png);">
                         <h5 class="section-about-title pe-3">Tentang Kami</h5>
                         <h1 class="mb-4">Selamat Datang di<span class="text-primary"> SMK Telematika Indramayu</span></h1>
-                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, dolorum, doloribus sunt dicta, officia voluptatibus libero necessitatibus natus impedit quam ullam assumenda? Id atque iste consectetur. Commodi odit ab saepe!</p>
+                        <p class="mb-4">{{$tentang->deskripsi ?? 'Tidak Ada Data'}}</p>
                         <div class="row gy-2 gx-4 mb-4">
                             <div class="col-sm-6">
                                 <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Guru Tersertifikasi</p>
@@ -25,7 +25,7 @@
                             </div>
                           
                         </div>
-                        <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">Read More</a>
+                        <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="{{route('tentang')}}">Selengkapnya</a>
                     </div>
                 </div>
             </div>
