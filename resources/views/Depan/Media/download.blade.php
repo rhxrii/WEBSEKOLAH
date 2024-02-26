@@ -93,7 +93,7 @@
                                             <td>{{$no++}}</td>
                                             <td>{{$down->judul}}</td>
                                             <td>
-                                                <a href="{{route('dd', $down->id)}}" class="btn btn-sm btn-success"><i class="fa fa-download"></i> Download File</a>
+                                                <a href="{{url('/').$down->file}}" download="{{$down->file}}" class="btn btn-sm btn-success"><i class="fa fa-download"></i> Download File</a>
                                             </td>
                                         </tr>
                                         @endforeach
