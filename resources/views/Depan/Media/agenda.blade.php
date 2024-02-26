@@ -78,7 +78,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-            <table class="table" id="tableberita">
+            <table class="table table-responsive">
                     <thead>
                         <tr>
                             <td>No</td>
