@@ -31,7 +31,8 @@
     <!-- Blog Start -->
     <x-comdepan.informasi :info="$info"/>
     <!-- Blog End -->
-    <x-comdepan.berita :berita="$berita"/>
+    <!-- <x-comdepan.berita :berita="$berita"/> -->
+    <x-comdepan.informasi :info="$info"/>
 
     <!-- Gallery Start -->
     <x-comdepan.galery :foto="$foto"/>
