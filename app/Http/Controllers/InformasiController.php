@@ -61,7 +61,7 @@ class InformasiController extends Controller
         ]);
         $path = 'GINFORMASI';
         $ext = $gambar->getClientOriginalExtension();
-        $namafile = 'Gambar_'.date('d_y_t').".".$ext;
+        $namafile = 'Gambar_'.date('d_y_t_s').".".$ext;
         $gambar->move($path, $namafile);
         $data = Informasi::create([
             'ginformasi' => $namafile,
@@ -126,7 +126,7 @@ class InformasiController extends Controller
         ]);
         $path = 'GINFORMASI';
         $ext = $gambar->getClientOriginalExtension();
-        $namafile = 'Gambar_'.date('d_y_t').".".$ext;
+        $namafile = 'Gambar_'.date('d_y_t_s').".".$ext;
         $gambar->move($path, $namafile);
         $data = Informasi::find($id)->update([
             'ginformasi' => $namafile,
