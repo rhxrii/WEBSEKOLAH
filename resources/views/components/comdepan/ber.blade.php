@@ -7,14 +7,14 @@
                 </p>
             </div>
             <div class="row g-4 justify-content-center">
-                @foreach($info as $iinf)
+                @foreach($berita as $iinf)
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-item">
                         <div class="blog-img">
                             <div class="blog-img-inner">
-                                <img class="img-fluid w-100 rounded-top card-img-top" src="{{asset('GINFORMASI/'.$iinf->ginformasi)}}" alt="Image">
+                                <img class="img-fluid w-100 rounded-top card-img-top" src="{{asset('GBERITA/'.$iinf->gberita)}}" alt="Image">
                                 <div class="blog-icon">
-                                    <a href="{{route('bacainformasi', $iinf->id)}}" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
+                                    <a href="{{route('bacaberita', $iinf->id)}}" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
                                 </div>
                             </div>
                             <div class="blog-info d-flex align-items-center border border-start-0 border-end-0">
@@ -22,14 +22,14 @@
                                         class="fa fa-calendar-alt text-primary me-2"></i>{{$iinf->created_at}}</small>
                                 
                                 <a href="#" class="btn-hover flex-fill text-center text-white py-2"><i
-                                        class="fa fa-tag text-primary me-2"></i>{{$iinf->tag_informasi}}</a>
+                                        class="fa fa-tag text-primary me-2"></i>{{$iinf->tag}}</a>
                             </div>
                         </div>
                         <div class="blog-content border border-top-0 rounded-bottom p-4">
                             <p class="mb-3">Posted By: Admin </p>
-                            <a href="{{route('bacainformasi', $iinf->id)}}" class="h4">{{Str::limit($iinf->judul_informasi, 20, '....')}}</a>
-                            <p class="my-3">{!! Str::limit($iinf->deskripsi_informasi, 20, '....') !!}</p>
-                            <a href="{{route('bacainformasi', $iinf->id)}}" class="btn btn-primary rounded-pill py-2 px-4">Selengkapnya</a>
+                            <a href="{{route('bacaberita', $iinf->id)}}" class="h4">{{Str::limit($iinf->judul, 20, '....')}}</a>
+                            <p class="my-3">{!! Str::limit($iinf->deskripsi, 20, '....') !!}</p>
+                            <a href="{{route('bacaberita', $iinf->id)}}" class="btn btn-primary rounded-pill py-2 px-4">Selengkapnya</a>
                         </div>
                     </div>
                 </div>
