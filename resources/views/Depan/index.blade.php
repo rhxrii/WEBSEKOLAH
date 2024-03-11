@@ -32,7 +32,7 @@
     <x-comdepan.informasi :info="$info"/>
     <!-- Blog End -->
     <!-- <x-comdepan.berita :berita="$berita"/> -->
-    <x-comdepan.ber :info="$info"/>
+    <x-comdepan.ber :ber="$ber"/>
 
     <!-- Gallery Start -->
     <x-comdepan.galery :foto="$foto"/>

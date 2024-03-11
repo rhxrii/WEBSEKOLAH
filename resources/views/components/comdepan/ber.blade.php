@@ -7,7 +7,7 @@
                 </p>
             </div>
             <div class="row g-4 justify-content-center">
-                @foreach($berita as $iinf)
+                @foreach($ber as $iinf)
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-item">
                         <div class="blog-img">

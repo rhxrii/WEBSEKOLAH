@@ -20,12 +20,12 @@ class ClientController extends Controller
     public function indexdepan(){
         $video = Video::first();
         $info = Informasi::limit(6)->get();
-        $berita = Berita::limit(6)->get();
+        $ber = Berita::limit(6)->get();
         $link = MLink::get();
         $foto = Foto::limit(6)->get();
         $tentang = ProfilSekolah::first();
         //dd($info);
-        return view('Depan/index', compact('video', 'info', 'berita', 'link', 'foto', 'tentang'));
+        return view('Depan/index', compact('video', 'info', 'ber', 'link', 'foto', 'tentang'));
     }
     public function informasi(){
         $link = MLink::get();
