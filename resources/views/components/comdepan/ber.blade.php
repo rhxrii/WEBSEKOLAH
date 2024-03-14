@@ -6,49 +6,33 @@
             <p class="mb-0">Berita Terupdate dari seputar Sekolah
             </p>
         </div>
-        <div class="row justify-content-center">
-            @foreach($ber as $iinf)
-            <div class="col-md-4 mt-3">
-                <!-- <div class="blog-item">
-                        <div class="blog-img">
-                            <div class="blog-img-inner" style="width: 18rem;">
-                                <img class="img-fluid rounded-top card-img-top" src="{{asset('GBERITA/'.$iinf->gberita)}}" alt="Image" width="100px" height="100px">
-                                <div class="blog-icon">
-                                    <a href="{{route('bacaberita', $iinf->id)}}" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
+        <div class="tab-class text-center">
+           
+            <div class="tab-content">
+                <div id="GalleryTab-1" class="tab-pane fade show p-0 active">
+                    <div class="row g-2">
+                        @foreach($ber as $gf)
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                            <div class="gallery-item h-100">
+                                <img src="{{asset('GBERITA/'. $gf->gfoto)}}" class="img-fluid rounded card-img-top" alt="Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">{{$gf->judul}}</h5>
+                                        <h5 class="text-white text-uppercase mb-2">{{$gf->deskripsi}}</h5>
+
+                                    </div>
+                                </div>
+                                <div class="gallery-plus-icon">
+                                    <a href="{{asset('GBERITA/'. $gf->gfoto)}}" data-lightbox="gallery-1" class="my-auto"><i
+                                            class="fas fa-plus fa-2x text-white"></i></a>
                                 </div>
                             </div>
-                            <div class="blog-info d-flex align-items-center border border-start-0 border-end-0">
-                                <small class="flex-fill text-center border-end py-2"><i
-                                        class="fa fa-calendar-alt text-primary me-2"></i>{{$iinf->created_at}}</small>
-                                
-                                <a href="#" class="btn-hover flex-fill text-center text-white py-2"><i
-                                        class="fa fa-tag text-primary me-2"></i>{{$iinf->tag}}</a>
-                            </div>
                         </div>
-                        <div class="blog-content border border-top-0 rounded-bottom p-4">
-                            <p class="mb-3">Posted By: Admin </p>
-                            <a href="{{route('bacaberita', $iinf->id)}}" class="h4">{{Str::limit($iinf->judul, 10, '....')}}</a>
-                            <p class="my-3">{!! Str::limit($iinf->deskripsi, 20, '....') !!}</p>
-                            <a href="{{route('bacaberita', $iinf->id)}}" class="btn btn-primary rounded-pill py-2 px-4">Selengkapnya</a>
-                        </div>
-                    </div> -->
-                <div class="card mb-3">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 blog-img-inner">
-                            <img src="{{asset('GBERITA/'.$iinf->gberita)}}" class="card-img-top" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{{Str::limit($iinf->judul, 10, '....')}}</h5>
-                                <p class="card-text">{!! Str::limit($iinf->deskripsi, 30, '....') !!}</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
+               
             </div>
-            @endforeach
-
         </div>
     </div>
 </div>
