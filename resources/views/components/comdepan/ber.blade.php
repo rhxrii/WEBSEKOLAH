@@ -12,7 +12,7 @@
                     <div class="blog-item">
                         <div class="blog-img">
                             <div class="blog-img-inner">
-                                <img class="img-fluid rounded-top card-img-top" src="{{asset('GBERITA/'.$iinf->gberita)}}" alt="Image">
+                                <img class="img-fluid rounded-top card-foto-top" src="{{asset('GBERITA/'.$iinf->gberita)}}" alt="Image">
                                 <div class="blog-icon">
                                     <a href="{{route('bacaberita', $iinf->id)}}" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
                                 </div>
