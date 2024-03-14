@@ -23,8 +23,8 @@
                                     </div>
                                 </div>
                                 <div class="gallery-plus-icon">
-                                    <a href="{{asset('GBERITA/'. $gf->gberita)}}" data-lightbox="gallery-1" class="my-auto"><i
-                                            class="fas fa-plus fa-2x text-white"></i></a>
+                                    <a href="{{route('bacaberita', $gf->id)}}" ><i
+                                            class="fas fa-eye fa-2x text-white"></i></a>
                                 </div>
                             </div>
                         </div>
