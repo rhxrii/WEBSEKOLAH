@@ -8,7 +8,7 @@
             </div>
             <div class="row justify-content-center">
                 @foreach($ber as $iinf)
-                <div class="col-md-4">
+                <div class="col-md-4 mt-3">
                     <div class="blog-item">
                         <div class="blog-img">
                             <div class="blog-img-inner">
@@ -27,7 +27,7 @@
                         </div>
                         <div class="blog-content border border-top-0 rounded-bottom p-4">
                             <p class="mb-3">Posted By: Admin </p>
-                            <a href="{{route('bacaberita', $iinf->id)}}" class="h4">{{Str::limit($iinf->judul, 20, '....')}}</a>
+                            <a href="{{route('bacaberita', $iinf->id)}}" class="h4">{{Str::limit($iinf->judul, 10, '....')}}</a>
                             <p class="my-3">{!! Str::limit($iinf->deskripsi, 20, '....') !!}</p>
                             <a href="{{route('bacaberita', $iinf->id)}}" class="btn btn-primary rounded-pill py-2 px-4">Selengkapnya</a>
                         </div>
