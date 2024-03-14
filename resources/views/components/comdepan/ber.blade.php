@@ -17,8 +17,8 @@
                                 <img src="{{asset('GBERITA/'. $gf->gberita)}}" class="img-fluid rounded card-img-top" alt="Image">
                                 <div class="gallery-content">
                                     <div class="gallery-info">
-                                        <h5 class="text-white text-uppercase mb-2">{{$gf->judul}}</h5>
-                                        <h5 class="text-white text-uppercase mb-2">{{$gf->deskripsi}}</h5>
+                                        <h5 class="text-white text-uppercase mb-2">{{Str::limit($gf->judul, 15, "...")}}</h5>
+                                        <h5 class="text-white text-uppercase mb-2">!! Str::limit($gf->deskripsi, 15, "...") !!}</h5>
 
                                     </div>
                                 </div>
