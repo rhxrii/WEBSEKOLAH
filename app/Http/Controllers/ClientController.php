@@ -19,8 +19,8 @@ class ClientController extends Controller
 {
     public function indexdepan(){
         $video = Video::first();
-        $info = Informasi::limit(6)->get();
-        $ber = Berita::limit(6)->get();
+        $info = Informasi::orderBy('id', 'DESC')->limit(6)->get();
+        $ber = Berita::orderBy('id', 'DESC')->limit(6)->get();
         $link = MLink::get();
         $foto = Foto::orderBy('id', 'DESC')->limit(6)->get();
         $tentang = ProfilSekolah::first();
