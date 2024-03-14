@@ -99,6 +99,9 @@
                             </div>
                         </div>
                         @endforeach
+                        <div class="col-md-12 d-flex justify-content-center">
+                            {{$foto->links()}}
+                        </div>
                     </div>
                 </div>
                
