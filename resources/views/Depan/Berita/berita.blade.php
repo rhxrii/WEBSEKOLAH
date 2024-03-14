@@ -105,6 +105,9 @@
                             </div>
                         </div>
                         @endforeach
+                        <div class="col-md-12 d-flex justify-content-center">
+                            {{$berita->links()}}
+                        </div>
                     </div>
                 </div>
                
