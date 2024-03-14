@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
     <style>
         .card-img-top {
-            height: 15vw;
+            height: 20vw;
             width: 100%;
             /* adjust this value as needed */
             object-fit: cover;
