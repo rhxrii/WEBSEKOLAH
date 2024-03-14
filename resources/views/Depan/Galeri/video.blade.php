@@ -82,14 +82,6 @@
                 <div id="GalleryTab-1" class="tab-pane fade show p-0 active">
                     <div class="row g-2">
                         @foreach($video as $gf)
-                        @php
-                        $data = $gf->kodevideo;
-                        $video = Youtube::getVideoInfo($data);
-                        $tb = $video->snippet->thumbnails->high;
-                        $judul = $video->snippet->title;
-                        $channel = $video->snippet->channelTitle;
-                        $deskripsi = $video->snippet->description;
-                        @endphp
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
 
                             
@@ -102,7 +94,9 @@
 
                         </div>
                         @endforeach
-                        
+                        <div class="col-md-12 d-flex justify-content-center mt-3">
+                            {{$video->links()}}
+                        </div>
                     </div>
                 </div>
 
