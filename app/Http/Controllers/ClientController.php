@@ -69,7 +69,7 @@ class ClientController extends Controller
     }
     public function galerivideo(){
         $link = MLink::get();
-        $video = Video::limit(6)->get();
+        $video = Video::simplePaginate(6);
         return view('Depan/Galeri/video', compact('video', 'link'));
     }
 

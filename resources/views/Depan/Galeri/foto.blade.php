@@ -99,7 +99,7 @@
                             </div>
                         </div>
                         @endforeach
-                        <div class="col-md-12 d-flex justify-content-center">
+                        <div class="col-md-12 d-flex justify-content-center mt-3">
                             {{$foto->links()}}
                         </div>
                     </div>
