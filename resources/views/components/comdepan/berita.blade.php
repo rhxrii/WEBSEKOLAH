@@ -13,7 +13,7 @@
                     <div class="blog-img">
                         <div class="blog-img-inner">
                             <img class="img-fluid rounded-top card-foto-top"
-                                src="{{asset('GBERITA/'.$berr->gberita)}}" alt="Image">
+                                src="{{asset('gg/'.$berr->gberita)}}" alt="Image">
                             <div class="blog-icon">
                                 <a href="{{route('bacaberita', $berr->id)}}" class="my-auto"><i
                                         class="fas fa-link fa-2x text-white"></i></a>
