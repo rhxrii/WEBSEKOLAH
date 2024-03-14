@@ -34,7 +34,7 @@
                     </div> -->
                 <div class="card mb-3">
                     <div class="row no-gutters">
-                        <div class="col-md-4">
+                        <div class="col-md-4 blog-img-inner">
                             <img src="{{asset('GBERITA/'.$iinf->gberita)}}" class="card-img-top" alt="...">
                         </div>
                         <div class="col-md-8">
