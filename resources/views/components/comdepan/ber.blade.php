@@ -1,4 +1,4 @@
-<div class="container-fluid blog py-5">
+<div class="container-fluid gallery py-5">
     <div class="container py-5">
         <div class="mx-auto text-center mb-5" style="max-width: 900px;">
             <h5 class="section-title px-3">Berita</h5>
