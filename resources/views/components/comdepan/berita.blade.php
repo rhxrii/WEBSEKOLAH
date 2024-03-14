@@ -8,11 +8,11 @@
         </div>
         <div class="row g-4 justify-content-center">
             @foreach($berita as $berr)
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="blog-item">
                     <div class="blog-img">
                         <div class="blog-img-inner">
-                            <img class="img-fluid rounded-top card-img-top"
+                            <img class="img-fluid rounded-top card-foto-top"
                                 src="{{asset('GBERITA/'.$berr->gberita)}}" alt="Image">
                             <div class="blog-icon">
                                 <a href="{{route('bacaberita', $berr->id)}}" class="my-auto"><i
