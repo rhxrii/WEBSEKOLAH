@@ -40,7 +40,7 @@
                         <div class="col-md-6">
                             <div class="card-body">
                                 <h5 class="card-title">{{Str::limit($iinf->judul, 10, '....')}}</h5>
-                                <p class="card-text">{!! Str::limit($iinf->deskripsi, 20, '....') !!}</p>
+                                <p class="card-text">{!! Str::limit($iinf->deskripsi, 10, '....') !!}</p>
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                             </div>
                         </div>
