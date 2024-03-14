@@ -22,7 +22,7 @@ class ClientController extends Controller
         $info = Informasi::limit(6)->get();
         $ber = Berita::limit(6)->get();
         $link = MLink::get();
-        $foto = Foto::limit(6)->get();
+        $foto = Foto::orderBy('id', 'DESC')->limit(6)->get();
         $tentang = ProfilSekolah::first();
         //dd($info);
         return view('Depan/index', compact('video', 'info', 'ber', 'link', 'foto', 'tentang'));
