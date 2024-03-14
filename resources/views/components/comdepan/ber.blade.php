@@ -18,7 +18,7 @@
                                 <div class="gallery-content">
                                     <div class="gallery-info">
                                         <h5 class="text-white text-uppercase mb-2">{{Str::limit($gf->judul, 15, "...")}}</h5>
-                                        <h5 class="text-white text-uppercase mb-2">{{!! Str::limit($gf->deskripsi, 15, "...") !!}}</h5>
+                                        <h5 class="text-white text-uppercase mb-2">{{$gf->created_at->diffForHumans()}}</h5>
 
                                     </div>
                                 </div>
