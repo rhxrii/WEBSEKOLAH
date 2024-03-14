@@ -40,6 +40,12 @@
             /* adjust this value as needed */
             object-fit: cover;
         }
+        .card-berita-top {
+            height: 20vw;
+            width: 10vw;
+            /* adjust this value as needed */
+            object-fit: cover;
+        }
 
         .card-foto-top {
             height: 40vw;
