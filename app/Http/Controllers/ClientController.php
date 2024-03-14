@@ -63,7 +63,7 @@ class ClientController extends Controller
     }
     public function galerifoto(){
         $link = MLink::get();
-        $foto = Foto::simplePagination(6)->get();
+        $foto = Foto::simplePagination(6);
 
         return view('Depan/Galeri/foto', compact('foto', 'link'));
     }
