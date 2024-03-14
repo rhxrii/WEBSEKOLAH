@@ -14,7 +14,7 @@
                         @foreach($ber as $gf)
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                             <div class="gallery-item h-100">
-                                <img src="{{asset('GBERITA/'. $gf->gfoto)}}" class="img-fluid rounded card-img-top" alt="Image">
+                                <img src="{{asset('GBERITA/'. $gf->gberita)}}" class="img-fluid rounded card-img-top" alt="Image">
                                 <div class="gallery-content">
                                     <div class="gallery-info">
                                         <h5 class="text-white text-uppercase mb-2">{{$gf->judul}}</h5>
@@ -23,7 +23,7 @@
                                     </div>
                                 </div>
                                 <div class="gallery-plus-icon">
-                                    <a href="{{asset('GBERITA/'. $gf->gfoto)}}" data-lightbox="gallery-1" class="my-auto"><i
+                                    <a href="{{asset('GBERITA/'. $gf->gberita)}}" data-lightbox="gallery-1" class="my-auto"><i
                                             class="fas fa-plus fa-2x text-white"></i></a>
                                 </div>
                             </div>
