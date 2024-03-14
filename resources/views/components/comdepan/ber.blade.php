@@ -6,9 +6,9 @@
                 <p class="mb-0">Berita Terupdate dari seputar Sekolah
                 </p>
             </div>
-            <div class="row g-4 justify-content-center">
+            <div class="row justify-content-center">
                 @foreach($ber as $iinf)
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="blog-item">
                         <div class="blog-img">
                             <div class="blog-img-inner">
