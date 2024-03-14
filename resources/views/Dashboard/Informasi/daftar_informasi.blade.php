@@ -45,11 +45,9 @@
                                                 </div>
                                             </div>
                                             <div class="card-body d-flex justify-content-center">
-                                                <a href="{{route('hapusfoto', $informasi->id)}}" class="btn btn-danger ml-2" data-confirm-delete="true"><i class="fa fa-trash" ></i></a>
+                                                <a href="{{route('hapus_informasiadm', $informasi->id)}}" class="btn btn-danger ml-2" data-confirm-delete="true"><i class="fa fa-trash" ></i></a>
                                             </div>
                                         </div>
-
-
                                     </div>
                                     @endforeach
                                 </div>
