@@ -12,7 +12,7 @@
                 <div class="blog-item">
                     <div class="blog-img">
                         <div class="blog-img-inner">
-                            <img class="img-fluid w-100 rounded-top card-img-top"
+                            <img class="img-fluid rounded-top card-img-top"
                                 src="{{asset('GBERITA/'.$berr->gberita)}}" alt="Image">
                             <div class="blog-icon">
                                 <a href="{{route('bacaberita', $berr->id)}}" class="my-auto"><i
